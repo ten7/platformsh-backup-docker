@@ -1,0 +1,24 @@
+---
+flighdeck_motd_name: "platformsh-backup 1.0.0"
+
+flightdeck_groups:
+  - name: "backup"
+
+flightdeck_users:
+  - name: "backup"
+    group: "backup"
+    groups:
+      - "cron"
+    home: "/home/backup"
+
+flightdeck_root_prompt: '\u@platformsh-backup:\w# '
+flightdeck_user_prompt: '\u@platformsh-backup:\w$ '
+
+flightdeck_motd_links:
+  - name: 'Code & docs'
+    url: 'https://github.com/ten7/platformsh-backup'
+
+platformsh_backup: {}
+
+platformsh_cli_version: "v3.81.0"
+platformsh_cli_url: "https://github.com/platformsh/platformsh-cli/releases/download/{{ platformsh_cli_version }}/platform.phar"
